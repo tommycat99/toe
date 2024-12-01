@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MissleToe - Boom to the Moon!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #020024, #090979, #00d4ff);
+      color: white;
+      text-align: center;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-top: 20px;
+      animation: glow 1.5s infinite alternate;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin: 20px 0;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 20px;
+    }
+    img {
+      width: 200px;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: block;
+      animation: bounce 2s infinite ease-in-out;
+    }
+    .cta {
+      background: #ff007c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      animation: pulse 2s infinite;
+    }
+    .cta:hover {
+      background: #ff3e9f;
+    }
+    footer {
+      margin-top: 40px;
+    }
+    a {
+      color: #ffdb00;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Animations */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff007c, 0 0 30px #ff007c;
+      }
+      100% {
+        text-shadow: 0 0 20px #ff007c, 0 0 40px #ff007c, 0 0 60px #ff007c;
+      }
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 MissleToe 🎄</h1>
+  <h2>Let's kiss the jeets goodbye! And boom to the moon! 🚀</h2>
+  <img src="https://pump.mypinata.cloud/ipfs/QmRppBXvWgYdBkSpgUfbxJ6z7jZhMd2ETFvWKN8k8vQUyj?img-width=256&img-dpr=2&img-onerror=redirect" alt="MissleToe Meme">
+  <p>CA: <span id="ca">HHoMgT2GcDnJUxbH937SxeKNQqVsryhNibt5SQUCpump</span></p>
+  <button class="cta" onclick="copyToClipboard()">Copy CA to Clipboard 📋</button>
+  <footer>
+    <p>Join us on <a href="https://t.me/missletoecto" target="_blank">Telegram</a>!</p>
+  </footer>
+
+  <script>
+    function copyToClipboard() {
+      const caText = document.getElementById("ca").textContent;
+      navigator.clipboard.writeText(caText).then(() => {
+        alert("CA copied to clipboard! 🚀");
+      });
+    }
+  </script>
+</body>
+</html>
